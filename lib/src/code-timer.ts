@@ -7,5 +7,5 @@ export const measure = (fn: Function, opts: TMeasureOpts = {}) => {
     fn();
     const finish = performance.now();
 
-    console.log(opts?.name, finish - start);
+    return finish - start;
 }
