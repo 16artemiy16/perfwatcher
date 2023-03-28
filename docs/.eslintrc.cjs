@@ -16,5 +16,25 @@ module.exports = {
 		browser: true,
 		es2017: true,
 		node: true
+	},
+	'rules': {
+		'indent': [
+			'error',
+			2
+		],
+		'linebreak-style': [
+			'error',
+			'unix'
+		],
+		'quotes': [
+			'error',
+			'single'
+		],
+		'semi': [
+			'error',
+			'always'
+		],
+		'@typescript-eslint/no-explicit-any': 'error',
+		'@typescript-eslint/no-unused-vars': 'error',
 	}
 };
