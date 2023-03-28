@@ -4,11 +4,11 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	optimizeDeps: {
-		include: ['perfwatcher'],
+		include: ['perfwatcher']
 	},
 	build: {
 		commonjsOptions: {
-			include: [/perfwatcher/, /node_modules/],
-		},
-	},
+			include: [/perfwatcher/, /node_modules/]
+		}
+	}
 });
