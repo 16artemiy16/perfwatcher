@@ -1,6 +1,6 @@
 export const fnDocs = [
   {
-    spec: 'measure(fn)',
+    spec: "measure(fn)",
     description: 'Measures the function execution time.',
     args: [
       {
