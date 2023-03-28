@@ -8,6 +8,7 @@
   },
   "scripts": {
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "test": "jasmine --config=jasmine.json",
     "build:dev": "tsc -m es6 --outDir dist/esm",
     "build:prod": "webpack --mode production"

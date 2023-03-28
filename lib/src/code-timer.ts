@@ -1,11 +1,9 @@
-type TMeasureOpts = {
-    name?: string;
-}
+import {TAnyFunction} from './models';
 
-export const measure = (fn: Function, opts: TMeasureOpts = {}) => {
-    const start = performance.now();
-    fn();
-    const finish = performance.now()
+export const measure = (fn: TAnyFunction) => {
+  const start = performance.now();
+  fn();
+  const finish = performance.now();
 
-    return finish - start;
-}
+  return finish - start;
+};
