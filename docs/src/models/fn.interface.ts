@@ -1,8 +1,9 @@
 export enum ArgType {
-	Array = 'Array'
+	Function = 'Function'
 }
 
 export interface IFnDescription {
+	name: string;
 	spec: string;
 	description: string;
 	args: {

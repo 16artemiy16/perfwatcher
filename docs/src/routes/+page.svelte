@@ -1,13 +1,38 @@
 <script>
+	import Header from '../components/layout/header.svelte';
+	import DocNavigation from '../components/layout/docNavigation.svelte';
 	import FnBlock from '../components/fnBlock.svelte';
 	import { fnDocs } from '../constants';
 
 	const fnList = fnDocs;
 </script>
 
-<h1>perfwatcher</h1>
-<em>The performance measure library.</em>
+<div class="page">
+	<Header />
+	<div class="middle">
+		<DocNavigation />
+		<main class="content">
+			{#each fnList as fn}
+				<FnBlock {fn} />
+			{/each}
+		</main>
+		<footer></footer>
+	</div>
+</div>
 
-{#each fnList as fn}
-	<FnBlock {fn} />
-{/each}
+<style>
+	.page {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+	.middle {
+		flex: 1;
+		display: flex;
+		overflow: hidden;
+	}
+	.content {
+		flex: 1;
+		overflow: auto;
+	}
+</style>
