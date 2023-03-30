@@ -1,5 +1,7 @@
 export enum ArgType {
-	Function = 'Function'
+	Function = 'Function',
+	Number = 'Number',
+	String = 'String'
 }
 
 export interface IFnDescription {

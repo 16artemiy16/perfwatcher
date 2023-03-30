@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd ./docs && npm run lint:fix && git add .
+stagedFiles=$(git diff --diff-filter=d --cached --name-only)
+
+if [ -n "$stagedFiles" ]; then
+  {
+    eslint --fix $stagedFiles
+    git add $stagedFiles
+  }
+fi
